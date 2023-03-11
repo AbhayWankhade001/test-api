@@ -1,0 +1,23 @@
+{
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/addData",
+        "methods": ["POST"],
+        "dest": "/api/addData"
+      },
+      {
+        "src": "/api/getData",
+        "methods": ["GET"],
+        "dest": "/api/getData"
+      }
+    ],
+    "env": {
+      "MONGO_URI": "mongodb+srv://abhaywankhade2004:9529370446@cluster0.kvkqvtb.mongodb.net/login?retryWrites=true&w=majority"
+    }
+  }  
